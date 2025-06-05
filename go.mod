@@ -1,8 +1,11 @@
-module simple_chasis
+module simple_chassis
 
 go 1.24.3
 
-require github.com/go-chassis/go-chassis v1.8.3
+require (
+	github.com/go-chassis/go-archaius v1.2.1
+	github.com/go-chassis/go-chassis v1.8.3
+)
 
 require (
 	github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973 // indirect
@@ -10,10 +13,11 @@ require (
 	github.com/emicklei/go-restful v2.11.1+incompatible // indirect
 	github.com/fsnotify/fsnotify v1.4.7 // indirect
 	github.com/go-chassis/foundation v0.1.1-0.20191113114104-2b05871e9ec4 // indirect
-	github.com/go-chassis/go-archaius v1.2.1 // indirect
 	github.com/go-chassis/go-restful-swagger20 v1.0.2 // indirect
+	github.com/go-chassis/paas-lager v1.1.1 // indirect
 	github.com/go-mesh/openlogging v1.0.1 // indirect
 	github.com/golang/protobuf v1.3.2 // indirect
+	github.com/gorilla/websocket v1.4.0 // indirect
 	github.com/hashicorp/go-version v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.8 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect

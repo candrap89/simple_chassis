@@ -1,27 +1,14 @@
 package handler
 
 import (
-	"fmt"
+	"context"
 	"net/http"
-
-	"github.com/go-chassis/go-chassis/server/restful"
 )
 
-// HelloService struct implements the URLPatterns
+// HelloService implements the REST schema
 type HelloService struct{}
 
-// URLPatterns maps routes to handlers
-func (s *HelloService) URLPatterns() []restful.Route {
-	return []restful.Route{
-		{
-			Method: http.MethodGet,
-			Path:   "/hello",
-			Func:   HelloHandler,
-		},
-	}
-}
-
-// HelloHandler writes a simple text response
-func HelloHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello, Chassis from a separate handler!")
+// Hello handles GET requests on /hello
+func (h *HelloService) Hello(ctx context.Context, rw http.ResponseWriter, r *http.Request) {
+	rw.Write([]byte("Hello from Go-Chassis with URL pattern!"))
 }

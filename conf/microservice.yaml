@@ -1,0 +1,9 @@
+applications:
+  name: hello-chassis
+
+service_description:
+  name: hello-chassis
+  version: 1.0.0
+
+registry:
+  disabled: true

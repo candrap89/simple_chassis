@@ -1,0 +1,14 @@
+service:
+  serviceName: hello-chassis
+  version: 1.0.0
+
+protocols:
+  rest:
+    listenAddress: 127.0.0.1:8082
+handler:
+  chain:
+    Provider:
+      default: bizkeeper-provider
+
+registry:
+  disabled: true
